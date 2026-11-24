@@ -2,6 +2,8 @@
 
 The engine is divided into four modules, with public interfaces under
 `include/vte/` and implementations under the matching `src/` subdirectory.
+Shared event types live in `include/vte/types.hpp`; `include/vte/pipeline.hpp`
+defines the composition boundary used by the application entry point.
 
 | Module | Planned structure | Responsibility |
 | --- | --- | --- |
@@ -23,4 +25,6 @@ The engine is divided into four modules, with public interfaces under
 The proposal leaves several implementation details open, including hash map
 versus trie routing, heap priority direction, and the concurrency guarantees
 required by each API. Resolve those choices when defining the module contracts;
-this scaffold does not assume them.
+the current headers are contract-only and do not assume them. Their method
+definitions and the `TelemetryPipeline::Process` implementation remain to be
+added. The entry point currently wires the components but does not ingest data.

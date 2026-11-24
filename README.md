@@ -26,4 +26,5 @@ For single-configuration generators, the executable is at
 - `data/` — local datasets; generated or recorded data is not committed
 - `docs/architecture.md` — module responsibilities and design constraints
 
-The module directories are scaffolding; implementation is not yet included.
+The module headers define the initial API contracts. The entry point wires the
+modules, but their processing implementations are not yet included.

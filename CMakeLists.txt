@@ -6,6 +6,7 @@ add_executable(vte_engine
     src/main.cpp
 )
 
+target_include_directories(vte_engine PRIVATE include)
 target_compile_features(vte_engine PRIVATE cxx_std_17)
 
 if(MSVC)
